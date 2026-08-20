@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { toast } from "sonner";
 
 export default function SendMessage() {
     const [formData, setFormData] = useState({
@@ -24,8 +25,7 @@ export default function SendMessage() {
         setLoading(true);
 
         try {
-            // Replace this with your API or n8n webhook
-            const response = await fetch("/api/contact", {
+            const response = await fetch(process.env.NEXT_PUBLIC_N8N_CONTACT_WEBHOOK, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -44,9 +44,20 @@ export default function SendMessage() {
                 company: "",
             });
 
-            alert("Message sent successfully!");
+            const data = await response.json();
+
+            if (data.spam === true) {
+                toast.error("Your message was flagged as spam by our AI agent.");
+                return;
+            }
+
+            if (!response.ok || data.success !== true) {
+                throw new Error(data.message || "Failed to send message");
+            }
+
+            toast.success("Message sent successfully!");
         } catch (error) {
-            alert("Something went wrong. Please try again.");
+            toast.error("Something went wrong. Please try again.");
         } finally {
             setLoading(false);
         }

@@ -5,6 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --font-jakarta: var(--jakarta);
   --font-poppins: var(--spaceGrotesk);
   --color-main-white: var(--main-white);
   --color-main-black: var(--main-black);

@@ -131,7 +131,7 @@ export const stackData = [
             },
             {
                 name: "Figma",
-                image: "/images/stack-logos/Figma.svg",
+                image: "/images/stack-logos/figma.svg",
             },
             {
                 name: "Photoshop",

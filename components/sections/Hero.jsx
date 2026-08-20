@@ -27,7 +27,7 @@ export default function Hero() {
                         </HeroSubHeadung>
                         <div className='flex items-center gap-3 mt-10 md:mt-14 lg:mt-18 flex-col md:flex-row'>
                             <Button href="#contact" className="bg-primary text-black" text="Let's Start Automate" />
-                            <Button className="border text-white" text="Download CV" />
+                            <Button href="#works" className="border text-white" text="Explore the work" />
                         </div>
                     </div>
                     <div className='wrapper-bottom-box w-full flex justify-center mt-10 md:mt-14 lg:mt-18'>

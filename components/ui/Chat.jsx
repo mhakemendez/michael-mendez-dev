@@ -142,6 +142,7 @@ export default function Chat() {
 
                 <button
                     type="submit"
+                    aria-label="Send Chat Message"
                     disabled={loading}
                     className="cursor-pointer cursor-target rounded-lg bg-primary px-6 py-3 text-white disabled:cursor-not-allowed disabled:opacity-50"
                 >

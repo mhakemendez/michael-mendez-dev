@@ -40,13 +40,13 @@ export default function Journey() {
                                             <Paragraph className="mt-4">
                                                 {data.description}
                                             </Paragraph>
-                                            <ul className={`mt-4 flex flex-wrap gap-1.5 ${index % 2 === 0 ? "md:justify-end" : "md:justify-start"}`}>
+                                            <div className={`mt-4 flex flex-wrap gap-1.5 ${index % 2 === 0 ? "md:justify-end" : "md:justify-start"}`}>
                                                 {data.tags.map((tag) => (
                                                     <SpanTag key={tag}>
                                                         {tag}
                                                     </SpanTag>
                                                 ))}
-                                            </ul>
+                                            </div>
                                         </div>
                                     </article>
                                 </SpotlightCard>

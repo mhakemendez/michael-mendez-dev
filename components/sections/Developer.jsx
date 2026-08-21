@@ -27,7 +27,7 @@ export default function Developer() {
                         </div>
                         <div className="wrapper-right-box w-full md:w-[60%]">
                             <Paragraph>
-                                A Website and WordPress Developer with 5+ years of experience building responsive, high-performance
+                                A Website and WordPress Developer with 4+ years of experience building responsive, high-performance
                                 websites and web applications for businesses and growing brands.
                             </Paragraph>
                             <Paragraph>

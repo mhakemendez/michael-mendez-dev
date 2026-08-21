@@ -3,7 +3,7 @@ import CurrentTime from "@/components/ui/CurrentTime";
 
 const tags = [
     { id: 1, label: "Available for work", icon: true },
-    { id: 2, label: "40+ Websites · 5 Years Experience", icon: false },
+    { id: 2, label: "40+ Websites · 4 Years Experience", icon: false },
     { id: 3, label: "Quezon City, Metro Manila · Philippines", icon: false },
     { id: 4, label: <CurrentTime />, icon: false },
 ];

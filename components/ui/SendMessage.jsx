@@ -50,7 +50,7 @@ export default function SendMessage() {
                 toast.error("Your message was flagged as spam by our AI agent.");
                 return;
             }
-
+            
             if (!response.ok || data.success !== true) {
                 throw new Error(data.message || "Failed to send message");
             }

@@ -24,7 +24,7 @@ export default function Contact() {
                             <SendMessage />
                         </SpotlightCard>
                         <SpotlightCard className='w-full md:w-[50%] lg:w-[45%] bg-white/16 rounded-lg shadow-sm shadow-primary backdrop-blur-[3px] border border-white/30 p-4 md:p-8'>
-                            <span className='uppercase inline-block tracking-[0.22em] text-primary mb-8'>Direct channels</span>
+                            <span className='uppercase inline-block tracking-[0.22em] text-primary text-[12px] md:text-[14px] mb-8'>Direct channels</span>
                             <div className='flex flex-col gap-5'>
                                 {channels.map((channel) => (
                                     <Link
@@ -38,8 +38,8 @@ export default function Contact() {
                                                 <channel.icon className='text-primary text-[18px]' />
                                             </div>
                                             <div className='flex flex-col'>
-                                                <span className='text-white'>{channel.title}</span>
-                                                <span className='text-white lowercase -mt-1 font-extralight text-[14px]'>{channel.value}</span>
+                                                <span className='text-white text-[13px] md:text-[14px]'>{channel.title}</span>
+                                                <span className='text-white lowercase -mt-1 font-extralight text-[12px] md:text-[14px]'>{channel.value}</span>
                                             </div>
                                         </div>
                                         <div>
@@ -49,7 +49,7 @@ export default function Contact() {
                                 ))}
                             </div>
                             <Paragraph className='mb-0! mt-5 italic text-[14px]!'>
-                                Have a project in mind or need help with your website? Let’s discuss your goals and explore how I can help with web development,
+                                Have a website to build, improve, or automate? Let’s discuss your goals and explore how I can help with web development,
                                 improvements, or automation solutions.
                             </Paragraph>
                         </SpotlightCard>

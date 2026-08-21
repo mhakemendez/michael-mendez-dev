@@ -8,9 +8,21 @@ export default function Chat() {
     const [response, setResponse] = useState("");
     const [loading, setLoading] = useState(false);
     const [messages, setMessages] = useState([]);
+    const [sessionId, setSessionId] = useState("");
 
     const messagesContainerRef = useRef(null);
     const inputRef = useRef(null);
+
+    useEffect(() => {
+        let id = localStorage.getItem("chatSessionId");
+
+        if (!id) {
+            id = crypto.randomUUID();
+            localStorage.setItem("chatSessionId", id);
+        }
+
+        setSessionId(id);
+    }, []);
 
     useEffect(() => {
         const container = messagesContainerRef.current;
@@ -46,7 +58,9 @@ export default function Chat() {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    message: userMessage,
+                    action: "chat",
+                    sessionId: sessionId,
+                    chatInput: userMessage,
                 }),
             });
 
@@ -86,8 +100,8 @@ export default function Chat() {
     };
 
     return (
-        <div className="w-full max-w-240 space-y-4 rounded-2xl bg-white p-4">
-            <div ref={messagesContainerRef} className="scrollbar-hide flex h-37.5 md:h-40 flex-col space-y-4 overflow-y-scroll">
+        <div className="w-full max-w-220 space-y-4 rounded-2xl bg-white p-4">
+            <div ref={messagesContainerRef} className="scrollbar-hide flex h-37.5 md:h-50 flex-col space-y-4 overflow-y-scroll">
                 {messages.length === 0 ? (
                     <div className="text-gray-400">
                         <p className="text-left text-[13px] md:text-[15px]">
@@ -100,7 +114,7 @@ export default function Chat() {
                         {messages.map((message, index) => (
                             <div
                                 key={index}
-                                className={`w-auto max-w-[70%] rounded-2xl p-2 text-[13px] md:text-[15px] text-left ${message.role === "user"
+                                className={`w-auto max-w-[80%] rounded-2xl p-2 text-[13px] md:text-[15px] text-left ${message.role === "user"
                                     ? "ml-auto bg-primary text-white"
                                     : "mr-auto bg-gray-100"
                                     }`}

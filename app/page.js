@@ -14,12 +14,12 @@ export default function Home() {
   return (
 
     <main className="">
-      {/* <TargetCursor
+      <TargetCursor
         spinDuration={2}
         hoverDuration={0.2}
         cursorColor="#10B981"
         cursorColorOnTarget="#10B981"
-      /> */}
+      />
       <div id="nav-hero-section" className="relative pt-5 pb-15">
         <Navigation />
         <Hero />

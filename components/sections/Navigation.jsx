@@ -31,7 +31,7 @@ export default function Navigation() {
                         ${isScrolled && 'bg-black/60 shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[3px] border border-white/30'}
                         `}>
                         {/* Logo */}
-                        <Link href="#nav-hero-section" className="text-[16px] text-white">
+                        <Link href="#nav-hero-section" className="text-[16px] text-white cursor-target">
                             <span className={`py-1 px-3 bg-primary text-white rounded-md inline-block me-2 shadow-lg`}>M</span> Michael Mendez
                         </Link>
 

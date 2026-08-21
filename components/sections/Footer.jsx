@@ -46,8 +46,8 @@ export default function Footer() {
                         ))}
                     </div>
                 </div>
-                <div className='mt-10'>
-                    <span className='font-extrabold text-white/5  text-[22vw] lg:text-[20vw] uppercase lg:leading-[90%]'>Mendez</span>
+                <div className='mt-10 @container'>
+                    <span className='font-extrabold text-white/5 text-[24cqw] uppercase lg:leading-[90%]'>Mendez</span>
                 </div>
                 <div className='border-t border-t-white/20 pt-3 flex items-center flex-col justify-between md:flex-row  z-1'>
                     <span className='text-white text-[14px]'>© {new Date().getFullYear()} Michael Mendez. All rights reserved.</span>

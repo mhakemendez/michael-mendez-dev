@@ -10,7 +10,7 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
-  title: "Michael Mendez | WordPress, React & Next.js Developer",
+  title: "Michael Mendez | WordPress, AI Automation, React & Next.js Developer",
   description:
     "Michael Mendez is a web developer specializing in WordPress, React, Next.js, Laravel, and n8n automation. Building fast, modern, SEO-friendly websites and automated solutions.",
   keywords: [

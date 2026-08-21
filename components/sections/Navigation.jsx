@@ -41,7 +41,7 @@ export default function Navigation() {
                                 <Link
                                     key={item.href}
                                     href={item.href}
-                                    className="transition-opacity hover:text-primary text-[14px] text-white"
+                                    className="transition-opacity hover:text-primary text-[14px] cursor-target text-white"
                                 >
                                     {item.label}
                                 </Link>

@@ -105,8 +105,7 @@ export default function Chat() {
                 {messages.length === 0 ? (
                     <div className="text-gray-400">
                         <p className="text-left text-[13px] md:text-[15px]">
-                            Ask my AI agent to learn more about my work,
-                            projects, services, and what I can build...
+                            Want to know more? Send me a message and let’s discuss your project...
                         </p>
                     </div>
                 ) : (

@@ -18,7 +18,7 @@ export default function Hero() {
                         <HeadingH4 className='text-primary font-bold shadow-lg text-center max-w-220 mt-12 mb-2 md:mb-0 uppercase'>Website Developer · AI Automation Developer</HeadingH4>
                         <HeadingH1>
                             Modern
-                            <span className='text-primary'> Web </span> Smart
+                            <span className='text-primary'> Website </span> Smart
                             <span className='text-primary'> Automation</span>
                         </HeadingH1>
                         <HeroSubHeadung>
